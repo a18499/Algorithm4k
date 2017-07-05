@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algorithm4k.iml" filepath="$PROJECT_DIR$/.idea/modules/Algorithm4k.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algorithm4k_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Algorithm4k_main.iml" group="Algorithm4k" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algorithm4k_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Algorithm4k_test.iml" group="Algorithm4k" />
+    </modules>
+  </component>
+</project>
