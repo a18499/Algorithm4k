@@ -1,2 +1,2 @@
 # Algorithm4k
-This is a algorithm for kotlin    
+This is a algorithm library for kotlin
