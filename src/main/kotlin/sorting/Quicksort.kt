@@ -1,6 +1,6 @@
 package sorting
 
-import java.util.logging.LogManager
+
 
 /**
  * Created by a1849 on 2017/7/5.
@@ -9,7 +9,7 @@ class Quicksort {
 
     var beforeSortArray : Array<Int> = arrayOf()
     fun init(arrays:Array<Int>):Boolean{
-        if(arrays.size.equals(0)){
+        if(arrays.isEmpty()){
             print("array is empty")
             return false
         }else{
@@ -27,7 +27,7 @@ class Quicksort {
     fun quicksort(left:Int,right:Int){
         var Left:Int
         var Right:Int
-        var Base:Int
+        val Base:Int
         Left=left
         Right=right
         if(Left>Right){
@@ -57,11 +57,22 @@ class Quicksort {
 
 }
 fun main(args: Array<String>) {
-    var testarray:Array<Int> = arrayOf(5,1,6,4,7,95,2,8,45,4,55,666,21,54)
-    var testquick:Quicksort= Quicksort()
+    val testarray:Array<Int> = arrayOf(5,1,6,4,7,95,2,8,45,4,55,666,21,54)
+    val testquick:Quicksort= Quicksort()
     testquick.init(testarray)
 
-    var result = testquick.sortIt()
+
+    val result = testquick.sortIt()
     result.forEach { print(" $it") }
+    val even: IntArray = intArrayOf(2, 4, 6)
+    val odd: IntArray = intArrayOf(1, 3, 5)
+
+    val lala: Array<IntArray> = arrayOf(even, odd)
+    for(each in lala){
+        for (each1 in each){
+            println(each1)
+        }
+
+    }
     //readLine()
 }
