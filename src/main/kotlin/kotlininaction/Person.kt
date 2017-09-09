@@ -10,4 +10,8 @@ fun main(args: Array<String>) {
 
     val testP = Practice()
     println(testP.max(5,6))
+
+    val testretangle  = Rectangle(11,11)
+    println("${testretangle.testLastChar()}")
+
 }
