@@ -11,7 +11,12 @@ class CollectionPtratice {
         return ""
     }
 
-
+    companion object {
+        val test = "Test"
+        fun getHashCode(){
+            println("Companion $test")
+        }
+    }
 
 
 }
@@ -30,4 +35,8 @@ fun main(args: Array<String>) {
     //Triple comment
     val testtest = """./test"test"/.//hi"""
     println(testtest)
+    println(CollectionPtratice.test)
+    val subScriber = Factory.newsubScribingUser("a184999@gmail.com")
+    println("${subScriber.nickname
+    }")
 }
