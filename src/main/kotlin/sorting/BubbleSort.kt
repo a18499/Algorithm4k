@@ -13,13 +13,13 @@ class BubbleSort {
     }
     fun sort():Array<Int>?{
         var temp:Int
-        val arraysize = if (Beforesorted != null) Beforesorted?.size else -1
+        val arraysize = if (Beforesorted != null) Beforesorted?.lastIndex else -1
         var index =0
 
-        while (index < arraysize!!.toInt()-1){
+        while (index <arraysize!!.toInt()){
             var innerindex = 0
 
-            while (innerindex < arraysize.toInt()-1-index){
+            while (innerindex < arraysize.toInt()-index){
 
                 if(Beforesorted!![innerindex]> Beforesorted!![innerindex+1]){
                     temp = Beforesorted!![innerindex]
