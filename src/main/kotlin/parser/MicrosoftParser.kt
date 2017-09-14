@@ -135,10 +135,37 @@ class MicrosoftParser{
 }
 
 fun main(args: Array<String>) {
+    if(args.size<1){
+        println("please insert -h for help")
+    }else{
+        var command = "No"
+        command = args[0]
+        if(command!=null){
+            when(command){
+                "-h" -> {
+                    println("Parser v1.0")
+                    println("-------------------------------help-----------------------------")
+                    println("usage: -p [xmlPath] [xmlLevel] [filtertag]")
+                    println("""Ex usage: -p "JobResults_DESKTOP-41ACUOA_2017-0906_0857-40.801.xml" "AssessmentResults/AssessmentResult/Iterations/Iteration/MetricValues/MetricValue" "WorkloadAverageConsumptionRate" """)
+
+                }
+                "-p" -> {
+                    val filepath = args[1]
+                    val xmlLevel = args[2]
+                    val filtertag = args[3]
+                    val parser = MicrosoftParser()
+                    parser.init(filepath)
+                    parser.findnode(xmlLevel,filtertag)
+                }
+            }
+        }
+    }
+/*
     val filepath ="C:\\Users\\a1849\\Desktop\\JobResults_DESKTOP-41ACUOA_2017-0906_0857-40.801.xml" //args[0]
     //println("File Path $filepath")
     val parser = MicrosoftParser()
     parser.init(filepath)
+
    // parser.parse()
     //AxeJobResults > AssessmentResults > AssessmentResult > Iterations > Iteration > MetricValues > MetricValue
     //parser.getDataByPath("""//AxeJobResults/AssessmentResults""")
@@ -149,4 +176,5 @@ fun main(args: Array<String>) {
     //parser.getNode()
     //AxeJobRsults > AssessmentResults > AssessmentResult > Iterations > Iteration > MetricValues > MetricValue
     parser.findnode("AssessmentResults/AssessmentResult/Iterations/Iteration/MetricValues/MetricValue","EstimatedFull2Natural")
+*/
 }
